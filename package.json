@@ -9,7 +9,7 @@
 	"dependencies": {
 		"firebase": "^3.6.1",
 		"react": "latest",
-		"react-native": "callstack-io/react-native#c18c4be8b6059762dfb6436f7ccfc2b96f1e9859",
+		"react-native": "callstack-io/react-native#feat/blob",
 		"ws": "^1.1.1"
 	}
 }

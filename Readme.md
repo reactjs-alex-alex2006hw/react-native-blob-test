@@ -1,5 +1,7 @@
 # react-native-blob-test
 
+> An example project to test out work being done on bringing https://github.com/silklabs/silk/tree/master/react-native-blobs upstream to React Native.
+
 Start dev server with:
 ```bash
 $ npm run dev

@@ -1,22 +1,14 @@
 'use strict';
 
-const WebSocketServer = require('ws').Server;
+const fs = require('fs');
 const http = require('http');
-const port = 7273;
 
-const server = http.createServer((req, res) => {
-  req.on('data', data => {
-    console.log('request received', data);
-    res.end('success');
-  });
+const WebSocketServer = require('ws').Server;
+
+const wss = new WebSocketServer({
+  server: http.createServer().listen(7232),
 });
 
-server.listen(port);
-
-const wss = new WebSocketServer({ server: server });
-
 wss.on('connection', (ws) => {
-  ws.on('message', (data) => {
-    console.log('websocket received', data.toString());
-  });
+  ws.send(fs.readFileSync('./assets/font.ttf'));
 });

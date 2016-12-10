@@ -19,7 +19,6 @@ class CaseOneDemo extends React.Component {
     };
 
     ws.onmessage = (e) => {
-      console.log(e.data);
       this.setState({ blob: e.data });
     };
   }

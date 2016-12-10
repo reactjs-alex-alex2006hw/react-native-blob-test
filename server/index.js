@@ -10,5 +10,9 @@ const wss = new WebSocketServer({
 });
 
 wss.on('connection', (ws) => {
+  ws.on('message', (d) => {
+    console.log(d);
+  });
+
   ws.send(fs.readFileSync('./assets/font.ttf'));
 });
